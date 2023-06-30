@@ -12,12 +12,14 @@ my_string = input("Enter a string: ")
 
 # check for any non-digits one or more
 # pattern = re.compile(r"\D+")
+# can also use negation one or more
+pattern = re.compile(r"[^0-9]+")
 
 # check for any non-digits one by one
 # pattern = re.compile(r"\D")
-
 # can also use negation
-pattern = re.compile(r"[^0-9]+")
+pattern = re.compile(r"[^0-9]")
+
 
 # perform the substitution below
 result = pattern.sub("_", my_string)
