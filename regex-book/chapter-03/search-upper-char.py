@@ -29,5 +29,6 @@ and print that complete word
 '''
 my_input = 'Avengers'
 dotsequence = re.search(r'\b[a-zA-Z]vengers', my_input)
+# dotsequence = re.search(r'^[a-zA-Z]vengers', my_input)
 print(dotsequence)
 print(dotsequence.string)
