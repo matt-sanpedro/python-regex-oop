@@ -22,10 +22,13 @@ while True:
     # does NOT work with "tony__stark"
     pattern = re.compile(r"^[\w]([._](?![._])|[\w]){7,20}[\w]$")
     result = pattern.match(username)
-    print(result)
+    # print(result)
 
-    if result:
+    if re.match(r'.*__', username):
+        print("Cannot have more than two underscores")
+    elif result:
         print(f"Username formation success: {username}")
+        print(result)
         break
     else:
         print("Invalid Username, please try again")
